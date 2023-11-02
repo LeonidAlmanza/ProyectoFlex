@@ -1,0 +1,67 @@
+.wrapper{
+  
+    display: flex;
+      flex-flow: row wrap;  /*2 flex-flow para decir que es en filas y que si no cabe se pasa para abajo */
+      text-align: center;
+      
+    
+}
+
+.wrapper > *{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+.header{
+    background-color: red;
+    height: 120px;
+    position: sticky;
+    top: 0;
+}
+
+.main{
+    background-color: deepskyblue;
+    height: 580px;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.aside1{
+    background-color: gold ;
+}
+
+.aside2{
+    background-color: hotpink;
+}
+
+
+
+.footer{
+    background-color: rgb(20, 207, 104);
+    height: 80px;
+}
+
+@media all and (min-width: 300px){
+      .main{
+            flex: 1;
+      }
+      .aside1{
+            order: 1;
+      }
+      .aside2{
+            order: 3;
+      }
+      .main{
+            order: 2;
+      }
+      .footer{
+            order: 4;
+      }
+}
+
+@media all and (min-width: 600px){
+    .aside{
+          flex: 1;
+    }
+}
